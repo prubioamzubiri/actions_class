@@ -1,0 +1,10 @@
+name: miprimieracion
+
+on: push
+
+jobs:
+    lamine:
+        runs-on: ubunt-latest
+        steps:
+            - name: Primera accion
+              run: echo "Hola mundo"

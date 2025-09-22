@@ -4,7 +4,7 @@ on: push
 
 jobs:
     lamine:
-        runs-on: ubunt-latest
+        runs-on: ubuntu-latest
         steps:
             - name: Primera accion
               run: echo "Hola mundo"

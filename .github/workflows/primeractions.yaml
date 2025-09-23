@@ -3,7 +3,7 @@ name: miprimieracion
 on:
   push:
     branches:
-      - feature-**
+      - main
 
 jobs:
     lamine:

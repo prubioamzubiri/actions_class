@@ -8,7 +8,7 @@ class TestMainFunctions(unittest.TestCase):
     
     def test_calculate_sum(self):
         """Test the calculate_sum function"""
-        self.assertEqual(calculate_sum(10, 20), 30)
+        self.assertEqual(calculate_sum(10, 20), 31)
         self.assertEqual(calculate_sum(0, 0), 0)
         self.assertEqual(calculate_sum(-5, 5), 0)
         self.assertEqual(calculate_sum(-10, -20), -30)

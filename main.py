@@ -14,6 +14,10 @@ def main():
     print(f"Created list: {my_list}")
     print(f"Reversed list: {reverse_list(my_list)}")
 
+    my_list = create_list(5)
+    print(f"Created list: {my_list}")
+    print(f"Reversed list: {reverse_list(my_list)}")
+
 def calculate_sum(a, b):
     return a + b
 

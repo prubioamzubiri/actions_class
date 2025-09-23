@@ -1,6 +1,11 @@
 name: miprimieracion
 
-on: push
+on:
+  push:
+    branches:
+      - feature-**
+    branches-ignore:
+      - feature-unai-**
 
 jobs:
     lamine:

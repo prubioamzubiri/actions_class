@@ -15,7 +15,7 @@ jobs:
         uses: docker/login-action@v3
         with:
           logout: true
-          Username: ${{secrets.DOCKERHUB_USERNAME}}
+          username: ${{secrets.DOCKERHUB_USER}}
           password: ${{secrets.DOCKERHUB_TOKEN}}
 
       - name: Build and push Docker image

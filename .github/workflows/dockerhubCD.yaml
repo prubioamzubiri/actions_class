@@ -4,8 +4,21 @@ on:
   push:
 
 jobs:
-  secrets:
+  push_dockerhub:
     runs-on: ubuntu-latest
     steps:
-      - name: echo a secret 
-        run: echo "${{secrets.DOCKERHUB_USER}}"
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v3
+        with:
+          context: .
+          push: true
+          tags: ${{secrets.DOCKERHUB_USER}}/cowcmd:latest
